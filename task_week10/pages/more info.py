@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib.pyplot as plt
-from matplotlib import rc
+from matplotlib import rc, font_manager
 
+font_prop = font_manager.FontProperties(fname=font_path)
+rc('font', family=font_prop.get_name())
 
 plt.rcParams['font.family'] = 'Malgun Gothic'
-plt.rcParams['axes.unicode_minus'] = False
 
 with st.sidebar:
     st.write("공용 와이파이가 가장 늦게 설치되기 시작한 구는 어디일까요?")
@@ -40,8 +40,8 @@ if submitted:
     fig, ax = plt.subplots()
     indoor_outdoor_counts.plot(kind='bar', ax=ax, color = 'pink')
     ax.set_title(f"{selected_region} 실내외 구분별 와이파이 설치 현황")
-    ax.set_xlabel("실내외구분")
-    ax.set_ylabel("설치 개수")
+    ax.set_xlabel("실내외구분", fontproperties=font_prop)
+    ax.set_ylabel("설치 개수", fontproperties=font_prop)
     st.pyplot(fig)
 
     # 연도별 데이터 계산
@@ -50,10 +50,10 @@ if submitted:
     # 그래프 2: 연도별 다중 막대 그래프
     fig, ax = plt.subplots(figsize=(10, 6))
     year_counts.plot(kind='bar', ax=ax)
-    ax.set_title(f"{selected_region} 연도별 실내외 구분 와이파이 설치 현황")
-    ax.set_xlabel("설치년도")
-    ax.set_ylabel("설치 개수")
-    ax.legend(title="실내외구분")
+    ax.set_title(f"{selected_region} 연도별 실내외 구분 와이파이 설치 현황", fontproperties=font_prop)
+    ax.set_xlabel("설치년도", fontproperties=font_prop)
+    ax.set_ylabel("설치 개수", fontproperties=font_prop)
+    ax.legend(title="실내외구분", fontproperties=font_prop)
     st.pyplot(fig)
 
 else:
