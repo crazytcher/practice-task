@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import rc, font_manager
 
+if platform.system() == "Windows":
+    font_path = "C:/Windows/Fonts/malgun.ttf"
 font_prop = font_manager.FontProperties(fname=font_path)
 rc('font', family=font_prop.get_name())
 
