@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import pydeck as pdk
 
+plt.rcParams['font.family'] = 'Malgun Gothic'
+plt.rcParams['axes.unicode_minus'] = False
+
 with st.sidebar:
     st.image("task_week10/image.png", caption="서울의 공공와이파이", use_container_width=True)
 
