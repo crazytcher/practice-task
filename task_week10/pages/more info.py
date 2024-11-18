@@ -1,3 +1,10 @@
+sudo apt-get install language-pack-ko
+export LANG=ko_KR.UTF-8
+export LANGUAGE=ko_KR.UTF-8
+export LC_ALL=ko_KR.UTF-8
+sudo dpkg-reconfigure locales
+
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
