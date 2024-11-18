@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import rc, font_manager
+import platform
 
 if platform.system() == "Windows":
     font_path = "C:/Windows/Fonts/malgun.ttf"
