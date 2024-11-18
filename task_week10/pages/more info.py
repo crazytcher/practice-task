@@ -10,7 +10,7 @@ plt.rcParams['axes.unicode_minus'] = False
 with st.sidebar:
     st.write("공용 와이파이가 가장 늦게 설치되기 시작한 구는 어디일까요?")
 
-data = pd.read_csv("publicwifi.csv")
+data = pd.read_csv("task_week10\publicwifi.csv")
 st.title("지역구별 실내외에 공용와이파이 설치 현황을 살펴보자")
 
 
