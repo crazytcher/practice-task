@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import rc, font_manager
+import koreanize_matplotlib
 
 font_path = "task_week10/Malgun Gothic.ttf"
 font_manager.fontManager.addfont(font_path)
