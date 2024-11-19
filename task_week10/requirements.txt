@@ -1,3 +1,5 @@
 pandas
 pydeck
 matplotlib
+koreanize-matplotlib
+setuptools
