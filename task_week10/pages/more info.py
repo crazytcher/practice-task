@@ -3,6 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import rc, font_manager
 
+font_path = "task_week10/Malgun Gothic.ttf"
+font_manager.fontManager.addfont(font_path)
+rc('font', family='Malgun Gothic')
+
 plt.rcParams['font.family'] = 'Malgun Gothic'
 
 with st.sidebar:
